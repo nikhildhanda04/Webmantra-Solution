@@ -1,5 +1,5 @@
 'use client';
-// import { BadgeIndianRupee } from "lucide-react";
+import { BadgeIndianRupee } from "lucide-react";
 import Graph from "./graph";
 import Employee from "./employee";
 import Bar from "./bar";
@@ -18,11 +18,15 @@ export default function Hero(){
     }}
   />
 
-        <div className="flex flex-col gap-8 py-36 px-4 items-center z-10">
-{/*             
-            <div className="bg-gradient-to-bl text-xs md:text-lg from-1% from-[#6366f1]/[0.3] to-[#ffffff] font-[poppins] text-neutral-700 px-7 py-2 border border-stone-200 rounded-full">
+        <div className="flex flex-col md:gap-8 gap-20 py-36 px-4 items-center z-10">
+                        
+            <motion.div 
+            initial={{opacity:0, y:20, filter:"blur(6px)"}}
+            animate={{opacity:1, y:0, filter:"blur(0px)"}}
+            transition={{duration:0.6, ease:"easeIn"}}
+            className="bg-gradient-to-bl md:hidden  text-xs md:text-lg from-1% from-[#6366f1]/[0.3] to-[#ffffff] font-[poppins] text-neutral-700 px-7 py-2 border border-stone-200 rounded-full">
               <BadgeIndianRupee className="inline text-primary mr-1" />  reach levels you never knew existed 
-            </div> */}
+            </motion.div>
 
             <motion.div 
             initial={{opacity:0, y:20, filter:"blur(6px)"}}
