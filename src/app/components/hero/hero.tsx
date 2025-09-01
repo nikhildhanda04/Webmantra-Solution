@@ -42,7 +42,7 @@ export default function Hero(){
             </motion.div>
         </div>
 
-        <div className="flex flex-row gap- mt-4 w-full  relative bottom-24 px-36">
+        <div className="flex md:flex-row flex-col gap- mt-4 w-full  relative bottom-24 px-36">
 
             <motion.div
             initial={{opacity:0, filter:"blur(6px)"}}
@@ -51,7 +51,7 @@ export default function Hero(){
             >
             <motion.div 
 
-            className="relative hodden md:flex flex-col gap-8 items-end bottom-8 right-12">
+            className="md:relative hidden md:flex flex-col gap-8 items-end bottom-8 right-12">
                 <Avatar />
 
             <motion.div
