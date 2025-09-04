@@ -3,7 +3,7 @@ import { Phone, Mail } from 'lucide-react'
 export default function ContactUs(){
     return(
         <>
-        <div className="flex flex-col gap-18 py-28 px-4 items-center md:px-52">
+        <div className="flex flex-col w-full justify-between gap-18 py-28 px-4 md:px-52">
 
             <div className="font-primary text-5xl">
                 Get in Touch
@@ -14,7 +14,7 @@ export default function ContactUs(){
 
             <div className="flex flex-col md:flex-row items-center md:items-start justify-between md:pr-56 ">
 
-            <form className="bg-white w-full  flex flex-col gap-12">
+            <form className="bg-white  flex flex-col gap-12">
 
                 <input 
                 placeholder="Your Name"
