@@ -43,10 +43,10 @@ export default function ContactUs(){
                 </div>
 
                 <div className="flex flex-row gap-4 mt-4 text-xl tracking-tight">
-                  <Phone />  +91 9215593793
+                  <Phone />  +91 9710003577
                 </div>
                 <div className="flex flex-row gap-4 text-xl tracking-tight">
-                  <Phone />  +91 9215593793
+                  <Phone />  +91 8866349970
                 </div>
                 <div className="flex flex-row gap-4 text-center text-xl tracking-tight">
                   <Mail/>  webmantrasol@gmail.com

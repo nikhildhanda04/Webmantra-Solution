@@ -20,13 +20,13 @@ export default function Footer(){
                     <div className="font-secondary text-lg text-zinc-700 hover:text-primary transition-all duration-200 mt-1">Faqs</div>
                     </div>
 
-                    <div className="flex flex-col">
+                    {/* <div className="flex flex-col">
                     <div className="font-secondary font-medium text-2xl">
                         Social
                     </div>
                     <div className="font-secondary text-lg text-zinc-700 hover:text-primary transition-all duration-200 mt-3">X</div>
                     <div className="font-secondary text-lg text-zinc-700 hover:text-primary transition-all duration-200 mt-1">Linkedin</div>
-                    </div>
+                    </div> */}
 
 
                 </div>
