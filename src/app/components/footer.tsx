@@ -1,4 +1,13 @@
+'use client'
 export default function Footer(){
+
+            const scrollToSection = (sectionId: string) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
     return(
         <>
         <div className="flex flex-col mask-b-from-50% border-t border-neutral-200">
@@ -14,11 +23,44 @@ export default function Footer(){
                     <div className="font-secondary font-medium text-2xl">
                         Navigation
                     </div>
-                    <div className="font-secondary text-lg text-zinc-700 hover:text-primary transition-all duration-200 mt-3">Home</div>
-                    <div className="font-secondary text-lg text-zinc-700 hover:text-primary transition-all duration-200 mt-1">Services</div>
-                    <div className="font-secondary text-lg text-zinc-700 hover:text-primary transition-all duration-200 mt-1">Pricing</div>
-                    <div className="font-secondary text-lg text-zinc-700 hover:text-primary transition-all duration-200 mt-1">Faqs</div>
+                 <a 
+                href="#home"
+                onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("home");
+                }}
+                 className="font-secondary text-lg text-zinc-700 hover:text-primary transition-all duration-200 mt-1">Home</a>
+                                     <a 
+                href="#features"
+                onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("features");
+                }}
+                 className="font-secondary text-lg text-zinc-700 hover:text-primary transition-all duration-200 mt-1">Features</a>
+                                     <a 
+                href="#about"
+                onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("about");
+                }}
+                 className="font-secondary text-lg text-zinc-700 hover:text-primary transition-all duration-200 mt-1">Workflow</a>
+                                     <a 
+                href="#reviews"
+                onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("reviews");
+                }}
+                 className="font-secondary text-lg text-zinc-700 hover:text-primary transition-all duration-200 mt-1">Reviews</a>
+
+                 <a 
+                href="#faq"
+                onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("faq");
+                }}
+                 className="font-secondary text-lg text-zinc-700 hover:text-primary transition-all duration-200 mt-1">Faqs</a>
                     </div>
+                                     
 
                     {/* <div className="flex flex-col">
                     <div className="font-secondary font-medium text-2xl">
