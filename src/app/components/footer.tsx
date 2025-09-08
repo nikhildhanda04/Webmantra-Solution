@@ -1,4 +1,7 @@
 'use client'
+
+import { motion } from 'framer-motion'
+
 export default function Footer(){
 
             const scrollToSection = (sectionId: string) => {
@@ -10,7 +13,11 @@ export default function Footer(){
 
     return(
         <>
-        <div className="flex flex-col mask-b-from-50% border-t border-neutral-200">
+        <motion.div 
+        initial={{opacity:0, y:20, filter:"blur(6px)"}}
+        whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
+        transition={{duration:0.6, ease:"easeIn"}}
+        className="flex flex-col mask-b-from-50% border-t border-neutral-200">
 
             <div className="flex flex-col md:flex-row justify-between px-4 md:text-left gap-12 md:gap-0 text-center md:px-36 py-24">
 
@@ -79,7 +86,7 @@ export default function Footer(){
                 WEB MANTRA SOL
             </div>
 
-        </div>
+        </motion.div>
         </>
     )
 }

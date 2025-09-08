@@ -1,13 +1,21 @@
+'use client'
+
 import { Check } from 'lucide-react'
 
+import { motion } from 'framer-motion'
+ 
 export default function Pricing(){
     return(
         <>
         <div className="flex flex-col gap-36 py-28 px-24 tracking-tight">
 
-            <div className="font-secondary font-medium text-5xl text-zinc-800">
+            <motion.div
+        initial={{opacity:0, y:20, filter:"blur(6px)"}}
+        animate={{opacity:1, y:0, filter:"blur(0px)"}}
+        transition={{duration:0.6, ease:"easeIn"}}
+            className="font-secondary font-medium text-5xl text-zinc-800">
                Pricing
-            </div>
+            </motion.div>
 
             <div className="flex flex-col md:flex-row gap-6 justify-between">
 

@@ -1,4 +1,7 @@
+'use client'
+
 import Qna from "./qna";
+import { motion } from 'framer-motion'
 
 export default function Queries() {
 
@@ -22,20 +25,30 @@ export default function Queries() {
     ]
     return(
   <>
-        <div className="flex flex-col gap-14 px-4 md:px-52 py-36 w-full">
+        <motion.div 
+        
+        className="flex flex-col gap-14 px-4 md:px-52 py-36 w-full">
 
-            <div className="font-primary text-5xl text-dark dark:text-light ">
+            <motion.div 
+            initial={{opacity:0, y:20, filter:"blur(6px)"}}
+            whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
+            transition={{duration:0.6, ease:"easeIn"}}
+            className="font-primary text-5xl text-dark dark:text-light ">
                 Queries
                 <div className="font-secondary text-sm text-zinc-700">You got questions? We got you.</div>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-12 justify-between">
+            <motion.div
+        initial={{opacity:0, y:20, filter:"blur(6px)"}}
+        whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
+        transition={{duration:0.6, ease:"easeIn"}}
+            className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-12 justify-between">
                 {queries.map((query, index) => (
                     <Qna key={index} question={query.question} answer={query.answer} />
                 ))}
-            </div>
+            </motion.div>
 
-            </div>
+            </motion.div>
 
         </>
     )}

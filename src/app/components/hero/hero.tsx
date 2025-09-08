@@ -18,11 +18,11 @@ export default function Hero(){
     }}
   />
 
-        <div className="flex flex-col md:gap-8 gap-20 py-36 px-4 items-center z-10">
+        <div className="flex flex-col md:gap-8 gap-20 py-36 px-4 items-center z-10 overflow-hidden">
                         
             <motion.div 
             initial={{opacity:0, y:20, filter:"blur(6px)"}}
-            animate={{opacity:1, y:0, filter:"blur(0px)"}}
+            whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
             transition={{duration:0.6, ease:"easeIn"}}
             className="bg-gradient-to-bl md:hidden  text-xs md:text-lg from-1% from-[#6366f1]/[0.3] to-[#ffffff] font-[poppins] text-neutral-700 px-7 py-2 border border-stone-200 rounded-full">
               <BadgeIndianRupee className="inline text-primary mr-1" />  reach levels you never knew existed 
@@ -30,7 +30,7 @@ export default function Hero(){
 
             <motion.div 
             initial={{opacity:0, y:20, filter:"blur(6px)"}}
-            animate={{opacity:1, y:0, filter:"blur(0px)"}}
+            whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
             transition={{duration:0.6, ease:"easeIn"}}
             className="text-3xl md:text-7xl font-secondary font-medium text-center tracking-tight text-zinc-800">
                 Elevate Your Business  with <br /> <span className="font-bold">Web Mantra Solutions</span>
@@ -38,7 +38,7 @@ export default function Hero(){
 
             <motion.div 
             initial={{opacity:0, y:20, filter:"blur(6px)"}}
-            animate={{opacity:1, y:0, filter:"blur(0px)"}}
+            whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
             transition={{duration:0.6, ease:"easeIn", delay:0.2}}
             className="text-sm md:text-lg font-para text-stone-400 md:px-96 text-center">
                 Empowering your business with a stunning website that captivates your audience and drives results. <br />
@@ -50,7 +50,7 @@ export default function Hero(){
 
             <motion.div
             initial={{opacity:0, filter:"blur(6px)"}}
-            animate={{opacity:1, filter:"blur(0px)"}}
+            whileInView={{opacity:1, filter:"blur(0px)"}}
             transition={{duration:0.6, ease:"easeIn"}}
             >
             <motion.div 
@@ -59,8 +59,8 @@ export default function Hero(){
                 <Avatar />
 
             <motion.div
-                        initial={{opacity:0, y:20, filter:"blur(6px)"}}
-            animate={{opacity:1, y:0, filter:"blur(0px)"}}
+            initial={{opacity:0, y:20, filter:"blur(6px)"}}
+            whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
             transition={{duration:0.6, ease:"easeIn"}}
             >
             <motion.div
@@ -77,13 +77,13 @@ export default function Hero(){
             </motion.div>
 
             <motion.div
-                                    initial={{opacity:0, y:20, filter:"blur(6px)"}}
-            animate={{opacity:1, y:0, filter:"blur(0px)"}}
+            initial={{opacity:0, y:20, filter:"blur(6px)"}}
+            whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
             transition={{duration:0.6, ease:"easeIn"}}
             >
             <motion.div 
             initial={{y:7}}
-            animate={{y:0}}
+            whileInView={{y:0}}
             transition={{duration:1.3, ease:"easeInOut", repeat:Infinity, repeatType:"reverse"}}
             className="relative md:block hidden top-4 right-8">
                 <Graph />
@@ -92,12 +92,12 @@ export default function Hero(){
 
             <motion.div
                                                 initial={{opacity:0, y:20, filter:"blur(6px)"}}
-            animate={{opacity:1, y:0, filter:"blur(0px)"}}
+            whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
             transition={{duration:0.6, ease:"easeIn"}}
             >
             <motion.div 
             initial={{y:7}}
-            animate={{y:0}}
+            whileInView={{y:0}}
             transition={{duration:1.5, ease:"easeInOut", repeat:Infinity, repeatType:"reverse"}}
             className="relative md:block hidden">
                 <Bar />

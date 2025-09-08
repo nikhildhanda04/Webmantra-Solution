@@ -87,16 +87,23 @@ export default function ReviewsCarousel() {
   };
 
   if (isMobile) {
-    // Mobile Interface - Single card with swipe and arrows
     return (
       <div className="flex flex-col gap-18 z-10 py-28 px-4">
-        <div className="font-primary text-4xl font-medium text-left text-zinc-800">
+        <motion.div 
+        initial={{opacity:0, y:20, filter:"blur(6px)"}}
+        whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
+        transition={{duration:0.6, ease:"easeIn"}}
+        className="font-primary text-4xl font-medium text-left text-zinc-800">
           Trusted by Our Clients.
           <div className="font-secondary text-sm text-zinc-700">Top notch reviews from our clients.</div>
-        </div>
+        </motion.div>
         
-        <div className="relative w-full py-8">
-          {/* Mobile carousel container */}
+        <motion.div
+        initial={{opacity:0, y:20, filter:"blur(6px)"}}
+        whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
+        transition={{duration:0.6, ease:"easeIn"}}
+        className="relative w-full py-8">
+         
           <div className="relative overflow-hidden rounded-2xl">
             <motion.div
               key={currentIndex}
@@ -186,15 +193,18 @@ export default function ReviewsCarousel() {
               Swipe or use arrows to browse
             </span>
           </div>
-        </div>
+        </motion.div>
       </div>
     );
   }
 
-  // Desktop Interface - Original infinite scroll carousel
   return (
     <>
-      <div className="flex flex-col gap-18 z-10 py-28 px-52">
+      <motion.div 
+      initial={{opacity:0, y:20, filter:"blur(6px)"}}
+    animate={{opacity:1, y:0, filter:"blur(0px)"}}
+    transition={{duration:0.6, ease:"easeIn"}}
+      className="flex flex-col gap-18 z-10 py-28 px-52">
         <div className="font-primary text-5xl font-medium text-left text-zinc-800">
           Trusted by Our Clients.
           <div className="font-secondary text-sm text-zinc-700">Top notch reviews from our clients.</div>
@@ -252,7 +262,7 @@ export default function ReviewsCarousel() {
 
           <div className="absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-white to-transparent pointer-events-none" />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
