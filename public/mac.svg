@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6000 4000" width="6000" height="4000">
+	<title>Stylized laptop side mockup</title>
+	<style>
+	</style>
+	<g id="Effects">
+		<rect width="6000" height="4000" id="Gradient Color" style="fill: #6476a6"/>
+		<rect width="6000" height="4000" id="Element Color" style="fill: #5a6fa5"/>
+	</g>
+	<rect width="6000" height="4000" id="Laptop Color" style="fill: #647aa2"/>
+</svg>

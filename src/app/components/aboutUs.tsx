@@ -5,14 +5,14 @@ import { motion } from 'framer-motion'
 export default function AboutUs() {
   return (
     <>
-      <div className="flex flex-col  gap-18 py-28 px-4 md:px-52 relative">
+      <div className="flex flex-col bg-primary/[0.8] gap-18 text-zinc-100 py-28 px-4 md:px-52 relative">
         <motion.div
         initial={{opacity:0, y:20, filter:"blur(6px)"}}
         whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
         transition={{duration:0.6, ease:"easeIn"}}
-        className="font-primary text-5xl text-zinc-800 ">
+        className="font-primary text-7xl text-zinc-100 ">
             Work Flow
-            <div className="font-secondary text-sm text-zinc-700">What happens after you decide to work with us.</div>
+            <div className="font-secondary text-sm text-zinc-300">What happens after you decide to work with us.</div>
 
         </motion.div>
 
@@ -31,7 +31,7 @@ export default function AboutUs() {
         transition={{duration:0.6, ease:"easeIn"}}
           className="font-secondary text-3xl hover:text-primary transition-all duration-300 z-10">
             Connect. <br />
-            <span className="text-lg text-zinc-700 tracking-tight">
+            <span className="text-lg text-zinc-200 tracking-tight">
               Our team connects with you to understand your work and how we can help make a perfectly customized website for you.
             </span>
           </motion.div>
@@ -46,7 +46,7 @@ export default function AboutUs() {
         transition={{duration:0.6, ease:"easeIn"}} 
           className="font-secondary text-3xl hover:text-primary transition-all duration-300 z-10">
             Design. <br />
-            <span className="text-lg text-zinc-700 tracking-tight">
+            <span className="text-lg text-zinc-200 tracking-tight">
               Our design team gets to work and puts together a beautiful UI uniquely made for you, depending on the information we got from our meeting.
             </span>
           </motion.div>
@@ -57,7 +57,7 @@ export default function AboutUs() {
         transition={{duration:0.6, ease:"easeIn"}}
           className="font-secondary text-3xl hover:text-primary transition-all duration-300 z-10">
             Develop. <br />
-            <span className="text-lg text-zinc-700 tracking-tight">
+            <span className="text-lg text-zinc-200 tracking-tight">
               Our development team develops the best website specifically hand-crafted for your business, helping you reach the perfect audience.
             </span>
           </motion.div>
@@ -72,7 +72,7 @@ export default function AboutUs() {
         transition={{duration:0.6, ease:"easeIn"}}
           className="font-secondary text-3xl hover:text-primary transition-all duration-300 z-10">
             Deploy. <br />
-            <span className="text-lg text-zinc-700 tracking-tight">
+            <span className="text-lg text-zinc-200 tracking-tight">
               Your website is then deployed on a custom domain which can be searched or shared among users.
             </span>
           </motion.div>

@@ -1,12 +1,22 @@
 'use client';
-import { BadgeIndianRupee } from "lucide-react";
-import Graph from "./graph";
-import Employee from "./employee";
-import Bar from "./bar";
-import Avatar from "./avatar";
+// import { BadgeIndianRupee } from "lucide-react";
+// import Graph from "./graph";
+// import Employee from "./employee";
+// import Bar from "./bar";
+import Image from "next/image";
+// import Avatar from "./avatar";
 import { motion } from "framer-motion";
+import './hero.css'
 
 export default function Hero(){
+
+            const scrollToSection = (sectionId: string) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
     return(
         <>
 <div>
@@ -18,7 +28,7 @@ export default function Hero(){
     }}
   />
 
-        <div className="flex flex-col md:gap-8 gap-20 py-36 px-4 items-center z-10 overflow-hidden">
+        {/* <div className="flex flex-col md:gap-8 gap-20 py-36 px-4 items-center z-10 overflow-hidden">
                         
             <motion.div 
             initial={{opacity:0, y:20, filter:"blur(6px)"}}
@@ -104,7 +114,139 @@ export default function Hero(){
             </motion.div>
             </motion.div>
            
-        </div>
+        </div> */}
+
+
+            <div className="flex flex-row z-80 pt-36 py-16 px-4 md:px-44 w-full items-center">
+            <div className="flex flex-col gap-8 items-start w-full">
+
+                <motion.div 
+        initial={{opacity:0, y:20, filter:"blur(6px)"}}
+        whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
+        transition={{duration:0.6, ease:"easeIn"}}
+                className="font-primary font-bold tracking-tight text-4xl md:text-7xl ">
+                    Building imapctful <br /> web solutions <br /> for business.
+                </motion.div>
+                <motion.div 
+        initial={{opacity:0, y:20, filter:"blur(6px)"}}
+        whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
+        transition={{duration:0.8, ease:"easeIn"}}
+                className="font-secondary text-sm md:text-base text-zinc-400">
+                    we build top notch and high value websites for you. Every website we  build is unique and customized for you,  helping you reach the digital presence that you deserve. 
+                </motion.div>
+
+                <motion.div 
+        initial={{opacity:0, y:20, filter:"blur(6px)"}}
+        whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
+        transition={{duration:1, ease:"easeIn"}}
+                className="flex flex-row gap-8 mt-6 md:mt-12">
+                <a 
+                href="#contact"
+                onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("contact");
+                }}
+                className="font-secondary font-medium text-sm md:text-xl border border-stone-700 text-stone-200 bg-blue-600 px-7 py-3 md:py-4 rounded-full hover:-top-1 relative hover:shadow-[0px_4px_2px_rgba(0,0,0,0.9)] active:top-0 active:shadow-[0px_0px_0px_rgba(0,0,0,0,)] transition-all duration-100">
+                    Book a Call
+                </a>
+                <a 
+                href="#reviews"
+                onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("reviews")
+                }}
+                className="font-secondary font-medium text-sm md:text-xl border border-stone-700 text-stone-800 px-7 py-3 md:py-4 rounded-full hover:-top-1 relative hover:shadow-[0px_4px_2px_rgba(0,0,0,0.9)] active:top-0 active:shadow-[0px_0px_0px_rgba(0,0,0,0,)] transition-all duration-100">
+                    Check Reviews
+                </a>
+                </motion.div>
+
+                <div className="flex flex-row gap-12 mt-16 justify-between w-full items-center">
+                        <motion.div 
+                                initial={{opacity:0, y:20, filter:"blur(6px)"}}
+        whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
+        transition={{duration:0.6, ease:"easeIn"}}
+                        className="flex flex-col gap- text-center md:text-left tracking-tight">
+
+                            <div className="font-secondary font-bold tracking-tight text-2xl md:text-5xl text-zinc-600 ">
+                                25+
+                            </div>
+                            <div className="font-secondary text-base md:text-lg text-zinc-600">
+                               Happy Clients
+                            </div>
+
+
+                        </motion.div>
+
+                        <motion.div 
+                                initial={{opacity:0, y:20, filter:"blur(6px)"}}
+        whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
+        transition={{duration:0.8, ease:"easeIn"}}
+                        className="flex flex-col text-center md:text-left tracking-tight">
+
+                            <div className="font-secondary font-bold tracking-tight text-2xl md:text-5xl text-zinc-600 ">
+                                60+
+                            </div>
+                            <div className="font-secondary text-base md:text-lg text-zinc-600">
+                                Positive Reviews
+                            </div>
+
+
+                        </motion.div>
+
+                        <motion.div 
+                                initial={{opacity:0, y:20, filter:"blur(6px)"}}
+        whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
+        transition={{duration:1, ease:"easeIn"}}
+                        className="flex flex-col gap-  text-center md:text-left tracking-tight">
+
+                            <div className="font-secondary font-bold tracking-tight text-2xl md:text-5xl text-zinc-600 ">
+                                98%
+                            </div>
+                            <div className="font-secondary text-base md:text-lg text-zinc-600">
+                                Project Success Rate
+                            </div>
+
+
+                        </motion.div>
+                        
+                </div>
+
+
+
+            </div>
+
+           <motion.div 
+                   initial={{opacity:0, y:20, filter:"blur(6px)"}}
+        whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
+        transition={{duration:0.6, ease:"easeIn"}}
+           className="relative md:block hidden">
+                <motion.div
+            initial={{y:20}}
+            animate={{y:0}}
+            transition={{duration:1.3, ease:"easeInOut", repeat:Infinity, repeatType:"reverse"}}
+                className="w-200 h-180  relative">
+                <Image
+                    src="/mac.png"
+                    alt=""
+                    fill
+                    className="object-cover"
+                />
+                </motion.div>
+                <motion.div 
+            initial={{y:16}}
+            animate={{y:0}}
+            transition={{duration:1.6, ease:"easeInOut", repeat:Infinity, repeatType:"reverse"}}
+                className="w-120 h-120 absolute -top-20 -right-40 z-10">
+                <Image
+                    src="/phone.png"
+                    alt=""
+                    fill
+                    className="object-cover"
+                />
+                </motion.div>
+                </motion.div>
+
+            </div>
 </div>
 
 

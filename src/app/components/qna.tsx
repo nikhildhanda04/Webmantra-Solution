@@ -24,7 +24,7 @@ export default function Qna({question, answer}: QnaProps) {
 
       <div
         className={`overflow-hidden transition-all duration-500 ${
-          isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-68 opacity-100" : "max-h-0 opacity-0"
         } text-neutral-400 text-l`}
       >
        {answer}

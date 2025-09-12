@@ -1,9 +1,21 @@
 'use client'
-
+import {useState} from 'react';
 import { Phone, Mail } from 'lucide-react'
 import { motion } from 'framer-motion'
  
 export default function ContactUs(){
+
+        const [message, setMessage] = useState("");
+
+
+    const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const email = "nikhildhanda84@gmail.com";
+    const subject = encodeURIComponent("Let's Connect");
+    const body = encodeURIComponent(message);
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  };
+
     return(
         <>
         <div className="flex flex-col w-full justify-between gap-18 py-28 px-4 md:px-52">
@@ -19,9 +31,10 @@ export default function ContactUs(){
             </div>
             </motion.div>
 
-            <div className="flex flex-col md:flex-row items-center md:items-start justify-between md:pr-56 ">
+            <div className="flex flex-col md:gap-0 gap-12 md:flex-row items-center md:items-start justify-between md:pr-56 ">
 
             <motion.form 
+            onSubmit={handleSubmit}
         initial={{opacity:0, y:20, filter:"blur(6px)"}}
         whileInView={{opacity:1, y:0, filter:"blur(0px)"}}
         transition={{duration:0.6, ease:"easeIn"}}
@@ -39,6 +52,8 @@ export default function ContactUs(){
 
                                 <textarea 
                 placeholder="Your Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="font-secondary border-b border-stone-300 p-4 text-xl"
                 />
 
@@ -58,7 +73,7 @@ export default function ContactUs(){
                 </div>
 
                 <div className="flex flex-row gap-4 mt-4 text-xl tracking-tight">
-                  <Phone />  +91 9710003577
+                  <Phone />  +91 9215593793
                 </div>
                 <div className="flex flex-row gap-4 text-xl tracking-tight">
                   <Phone />  +91 8866349970
